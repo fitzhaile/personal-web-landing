@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root { --scrim: rgba(0,0,0,.7); }
+    :root { --scrim: rgba(0,0,0,.65); }
     html, body {
       height: 100%;
       margin: 0;
@@ -30,6 +30,7 @@
     h1 {
       font-size: clamp(2.5rem, 7vw, 3.8rem);
       font-weight: 800; letter-spacing: .5px; line-height: 1.06;
+      line-height: 5rem;
       margin: 0 0 .75rem;
       text-shadow: 0 1px 2px rgba(0,0,0,.45);
     }
@@ -70,15 +71,19 @@
         min-height: unset;         /* don't force extra height */
       }
 
+      h1 {
+        line-height: 3.75rem;
+      }
+
       /* Pin the footer to the bottom, above the URL bar */
       footer {
         position: sticky;
         bottom: 0;
         padding: .75rem 1rem;
-        background: none;
         color: #fff;
-        background: none !important;   /* override the gradient */
         text-shadow: 0 1px 2px rgba(0,0,0,.35); /* match your <p> style */
+          background-color: #1c1a1a;
+        font-size: .9rem;
       }
     }
 
@@ -95,7 +100,7 @@
     </div>
   </section>
   <footer>
-    Fitz Haile | (912) 507-4291 | <a href="mailto:fitz@fitzhaile.com">fitz@fitzhaile.com</a>
+    (912) 507-4291 | <a href="mailto:fitz@fitzhaile.com">fitz@fitzhaile.com</a>
   </footer>
 </body>
 </html>

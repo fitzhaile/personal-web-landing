@@ -55,33 +55,13 @@
     }
     footer a { color: inherit; text-decoration: none; }
 
+    /* Mobile: keep footer visible and center hero vertically */
     @media (max-width: 600px) {
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .hero {
-        flex: 1;                        /* takes remaining space */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;        /* vertical center */
-        align-items: center;            /* horizontal center */
-        text-align: center;
-        padding: 2rem;
-      }
-
-      footer {
-        margin-top: auto;               /* pushes footer to bottom */
-        background: none;
-        color: #fff;
-        font-size: 1rem;
-        padding: 1rem;
-      }
+      html, body { min-height: 100svh; background:#000; }   /* fill screen; no white edge */
+      body { display: grid; grid-template-rows: 1fr auto; } /* hero + footer within 1 viewport */
+      .hero { min-height: auto; display: grid; place-items: center; padding: 1.5rem; }
+      footer { padding: .75rem 1rem; background: none; color: #fff; }
     }
-
-
 
 
   </style>

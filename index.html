@@ -55,13 +55,31 @@
     }
     footer a { color: inherit; text-decoration: none; }
 
-    /* Mobile: keep footer visible and center hero vertically */
+    /* Mobile: center hero vertically + keep footer always visible */
     @media (max-width: 600px) {
-      html, body { min-height: 100svh; background:#000; }   /* fill screen; no white edge */
-      body { display: grid; grid-template-rows: 1fr auto; } /* hero + footer within 1 viewport */
-      .hero { min-height: auto; display: grid; place-items: center; padding: 1.5rem; }
-      footer { padding: .75rem 1rem; background: none; color: #fff; }
+      html, body { min-height: 100svh; background: #000; }
+
+      /* Center the headline/subhead */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   /* vertical center */
+        align-items: center;       /* horizontal center */
+        text-align: center;
+        padding: 2rem 1rem 3.25rem;/* extra bottom space so footer doesn't overlap */
+        min-height: unset;         /* don't force extra height */
+      }
+
+      /* Pin the footer to the bottom, above the URL bar */
+      footer {
+        position: sticky;
+        bottom: 0;
+        padding: .75rem 1rem;
+        background: none;
+        color: #fff;
+      }
     }
+
 
 
   </style>

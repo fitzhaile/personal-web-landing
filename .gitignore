@@ -1,0 +1,5 @@
+# All these weird files that I think are from Visual Code 
+.idea*
+
+# The Finder generated DS_Store
+*.DS_Store

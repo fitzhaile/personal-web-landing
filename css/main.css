@@ -117,7 +117,7 @@ footer a:hover {
         justify-content: center;   /* vertical center */
         align-items: center;       /* horizontal center */
         text-align: center;
-        padding: 2rem 1rem 3.25rem;/* extra bottom space so footer doesn't overlap */
+        padding: 2.15rem 1rem 3.1rem;/* extra bottom space so footer doesn't overlap */
         min-height: unset;         /* don't force extra height */
     }
 
